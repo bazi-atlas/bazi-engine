@@ -1,0 +1,46 @@
+{
+  "name": "bazi-engine",
+  "version": "0.15.1",
+  "description": "A convention-layer BaZi (Four Pillars of Destiny) engine: true solar time, sect-aware late-Zi rule, ten gods, luck pillars, compatibility, 64 hexagrams, shen sha, lunar-date layers — with every school divergence declared rather than silently chosen.",
+  "type": "module",
+  "main": "engine.mjs",
+  "exports": {
+    ".": "./engine.mjs",
+    "./browser": "./web/bazi-engine.web.js"
+  },
+  "files": [
+    "engine.mjs",
+    "web/bazi-engine.web.js",
+    "docs"
+  ],
+  "scripts": {
+    "test": "node test-web-engine.mjs && node test-luck-pillars.mjs && node test-compatibility.mjs && node test-favorable-element.mjs && node tools/test-crosscheck.mjs",
+    "test:crosscheck": "node tools/test-crosscheck.mjs",
+    "test:dual": "node test-web-engine.mjs",
+    "fixtures": "node generate-fixtures.mjs && node tools/stamp-expected.mjs"
+  },
+  "keywords": [
+    "bazi",
+    "four-pillars",
+    "chinese-astrology",
+    "chinese-metaphysics",
+    "ganzhi",
+    "true-solar-time",
+    "i-ching",
+    "hexagram",
+    "calendar"
+  ],
+  "license": "MIT",
+  "author": "Lei Zhifeng (雷志锋)",
+  "homepage": "https://bazi-atlas.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bazi-atlas/bazi-engine.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "lunar-javascript": "^1.7.4"
+  }
+}

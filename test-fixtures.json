@@ -1,0 +1,4137 @@
+{
+  "note": "P1 万年历抽检基准。2026-09-21 起 expected 字段由独立算法差分对拍自动填实（tools/test-crosscheck.mjs 全绿 + tools/stamp-expected.mjs 盖章），不再要求人工按八字功底抽查。人工只需复核 crosscheck 报告的不一致行；当前不一致 = 0。边界七类（lichun/jieqi/late-zi/dst/xinjiang/xiaoshu/overseas）全部覆盖，另含 DST 官方日期表与跨零点回滚回归守卫。",
+  "generatedAt": "2026-09-21T13:21:02.471Z",
+  "cases": [
+    {
+      "name": "basic-1986",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1986,
+          "month": 4,
+          "day": 21,
+          "hour": 12,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "乙",
+          "dayMasterEn": "Yi Yin Wood",
+          "dayElement": "木",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 11,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1986-04-21 12:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "丙寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "伤官",
+            "naYin": "炉中火"
+          },
+          "month": {
+            "ganzhi": "壬辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "长流水"
+          },
+          "day": {
+            "ganzhi": "乙未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "沙中金"
+          },
+          "time": {
+            "ganzhi": "壬午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "杨柳木"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 2,
+            "土": 2,
+            "金": 0,
+            "水": 2
+          },
+          "withHiddenHalfWeight": {
+            "木": 3.5,
+            "火": 3.5,
+            "土": 4,
+            "金": 0,
+            "水": 2.5
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 4,
+            "土": 4,
+            "金": 0,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "丙寅 壬辰 乙未 壬午",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "basic-1990",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1990,
+          "month": 8,
+          "day": 15,
+          "hour": 8,
+          "minute": 30,
+          "longitude": 121.47,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "壬",
+          "dayMasterEn": "Ren Yang Water",
+          "dayElement": "水",
+          "dayPolarity": "阳",
+          "dstApplied": true,
+          "trueSolarOffsetMinutes": 5.8799999999999955,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 7,
+            "minute": 35,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1990-08-15 07:30",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "庚午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "路旁土"
+          },
+          "month": {
+            "ganzhi": "甲申",
+            "hideGan": [
+              "庚",
+              "壬",
+              "戊"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "泉中水"
+          },
+          "day": {
+            "ganzhi": "壬子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "桑柘木"
+          },
+          "time": {
+            "ganzhi": "甲辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "覆灯火"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 1,
+            "土": 1,
+            "金": 2,
+            "水": 2
+          },
+          "withHiddenHalfWeight": {
+            "木": 2.5,
+            "火": 1.5,
+            "土": 2.5,
+            "金": 2.5,
+            "水": 3.5
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 1,
+            "土": 3,
+            "金": 2,
+            "水": 4
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "庚午 甲申 壬子 甲辰",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "basic-1995",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1995,
+          "month": 11,
+          "day": 3,
+          "hour": 16,
+          "minute": 45,
+          "longitude": 113.25,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "戊",
+          "dayMasterEn": "Wu Yang Earth",
+          "dayElement": "土",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -27,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 16,
+            "minute": 18,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1995-11-03 16:45",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "乙亥",
+            "hideGan": [
+              "壬",
+              "甲"
+            ],
+            "shiShenGan": "正官",
+            "naYin": "山头火"
+          },
+          "month": {
+            "ganzhi": "丙戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "屋上土"
+          },
+          "day": {
+            "ganzhi": "戊戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "平地木"
+          },
+          "time": {
+            "ganzhi": "庚申",
+            "hideGan": [
+              "庚",
+              "壬",
+              "戊"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "石榴木"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 1,
+            "土": 3,
+            "金": 2,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 1.5,
+            "火": 2,
+            "土": 4.5,
+            "金": 3.5,
+            "水": 2
+          },
+          "withHiddenFull": {
+            "木": 2,
+            "火": 3,
+            "土": 4,
+            "金": 4,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "乙亥 丙戌 戊戌 庚申",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "basic-2000",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2000,
+          "month": 1,
+          "day": 1,
+          "hour": 0,
+          "minute": 15,
+          "longitude": 116.4,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "戊",
+          "dayMasterEn": "Wu Yang Earth",
+          "dayElement": "土",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -14.399999999999977,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 0,
+            "minute": 0,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2000-01-01 00:15",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "己卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "城头土"
+          },
+          "month": {
+            "ganzhi": "丙子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "涧下水"
+          },
+          "day": {
+            "ganzhi": "戊午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "天上火"
+          },
+          "time": {
+            "ganzhi": "壬子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "偏财",
+            "naYin": "桑柘木"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 2,
+            "土": 2,
+            "金": 0,
+            "水": 3
+          },
+          "withHiddenHalfWeight": {
+            "木": 1.5,
+            "火": 2.5,
+            "土": 2.5,
+            "金": 0,
+            "水": 4
+          },
+          "withHiddenFull": {
+            "木": 1,
+            "火": 2,
+            "土": 3,
+            "金": 0,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "己卯 丙子 戊午 壬子",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "basic-2003",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2003,
+          "month": 6,
+          "day": 18,
+          "hour": 10,
+          "minute": 0,
+          "longitude": 104.07,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "壬",
+          "dayMasterEn": "Ren Yang Water",
+          "dayElement": "水",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -63.72000000000003,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 8,
+            "minute": 56,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2003-06-18 10:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "癸未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "杨柳木"
+          },
+          "month": {
+            "ganzhi": "戊午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "天上火"
+          },
+          "day": {
+            "ganzhi": "壬戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "大海水"
+          },
+          "time": {
+            "ganzhi": "甲辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "覆灯火"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 1,
+            "土": 4,
+            "金": 0,
+            "水": 2
+          },
+          "withHiddenHalfWeight": {
+            "木": 2,
+            "火": 2.5,
+            "土": 6,
+            "金": 0.5,
+            "水": 2.5
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 3,
+            "土": 5,
+            "金": 1,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "癸未 戊午 壬戌 甲辰",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "lichun-before",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2024,
+          "month": 2,
+          "day": 4,
+          "hour": 10,
+          "minute": 0,
+          "longitude": 116.4,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "戊",
+          "dayMasterEn": "Wu Yang Earth",
+          "dayElement": "土",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -14.399999999999977,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 9,
+            "minute": 45,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2024-02-04 10:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "癸卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "金箔金"
+          },
+          "month": {
+            "ganzhi": "乙丑",
+            "hideGan": [
+              "己",
+              "癸",
+              "辛"
+            ],
+            "shiShenGan": "正官",
+            "naYin": "海中金"
+          },
+          "day": {
+            "ganzhi": "戊戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "平地木"
+          },
+          "time": {
+            "ganzhi": "丁巳",
+            "hideGan": [
+              "丙",
+              "庚",
+              "戊"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "沙中土"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 2,
+            "土": 3,
+            "金": 0,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 2.5,
+            "火": 3,
+            "土": 4.5,
+            "金": 1.5,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 2,
+            "火": 3,
+            "土": 4,
+            "金": 3,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "癸卯 乙丑 戊戌 丁巳",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "lichun-after",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2024,
+          "month": 2,
+          "day": 4,
+          "hour": 18,
+          "minute": 0,
+          "longitude": 116.4,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "戊",
+          "dayMasterEn": "Wu Yang Earth",
+          "dayElement": "土",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -14.399999999999977,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 17,
+            "minute": 45,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2024-02-04 18:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "甲辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "覆灯火"
+          },
+          "month": {
+            "ganzhi": "丙寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "炉中火"
+          },
+          "day": {
+            "ganzhi": "戊戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "平地木"
+          },
+          "time": {
+            "ganzhi": "辛酉",
+            "hideGan": [
+              "辛"
+            ],
+            "shiShenGan": "伤官",
+            "naYin": "石榴木"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 1,
+            "土": 3,
+            "金": 2,
+            "水": 0
+          },
+          "withHiddenHalfWeight": {
+            "木": 3,
+            "火": 2,
+            "土": 4.5,
+            "金": 3,
+            "水": 0.5
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 3,
+            "土": 4,
+            "金": 3,
+            "水": 1
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "甲辰 丙寅 戊戌 辛酉",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "jieqi-before",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2025,
+          "month": 4,
+          "day": 4,
+          "hour": 15,
+          "minute": 0,
+          "longitude": 120.15,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "癸",
+          "dayMasterEn": "Gui Yin Water",
+          "dayElement": "水",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": 0.6000000000000227,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 15,
+            "minute": 0,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2025-04-04 15:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "乙巳",
+            "hideGan": [
+              "丙",
+              "庚",
+              "戊"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "覆灯火"
+          },
+          "month": {
+            "ganzhi": "己卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "城头土"
+          },
+          "day": {
+            "ganzhi": "癸卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "金箔金"
+          },
+          "time": {
+            "ganzhi": "庚申",
+            "hideGan": [
+              "庚",
+              "壬",
+              "戊"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "石榴木"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 3,
+            "火": 1,
+            "土": 1,
+            "金": 2,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 4,
+            "火": 1.5,
+            "土": 2,
+            "金": 3,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 1,
+            "土": 3,
+            "金": 3,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "乙巳 己卯 癸卯 庚申",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "jieqi-after",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2025,
+          "month": 4,
+          "day": 4,
+          "hour": 22,
+          "minute": 0,
+          "longitude": 120.15,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "癸",
+          "dayMasterEn": "Gui Yin Water",
+          "dayElement": "水",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": 0.6000000000000227,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 22,
+            "minute": 0,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2025-04-04 22:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "乙巳",
+            "hideGan": [
+              "丙",
+              "庚",
+              "戊"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "覆灯火"
+          },
+          "month": {
+            "ganzhi": "庚辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "白蜡金"
+          },
+          "day": {
+            "ganzhi": "癸卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "金箔金"
+          },
+          "time": {
+            "ganzhi": "癸亥",
+            "hideGan": [
+              "壬",
+              "甲"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "大海水"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 1,
+            "土": 1,
+            "金": 1,
+            "水": 3
+          },
+          "withHiddenHalfWeight": {
+            "木": 3.5,
+            "火": 1.5,
+            "土": 2,
+            "金": 1.5,
+            "水": 4
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 1,
+            "土": 2,
+            "金": 2,
+            "水": 4
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "乙巳 庚辰 癸卯 癸亥",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "late-zi-sect1",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1986,
+          "month": 4,
+          "day": 21,
+          "hour": 23,
+          "minute": 30,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "丙",
+          "dayMasterEn": "Bing Yang Fire",
+          "dayElement": "火",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 23,
+            "minute": 6,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1986-04-21 23:30",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "丙寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "炉中火"
+          },
+          "month": {
+            "ganzhi": "壬辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "长流水"
+          },
+          "day": {
+            "ganzhi": "丙申",
+            "hideGan": [
+              "庚",
+              "壬",
+              "戊"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "山下火"
+          },
+          "time": {
+            "ganzhi": "戊子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "霹雳火"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 2,
+            "土": 2,
+            "金": 1,
+            "水": 2
+          },
+          "withHiddenHalfWeight": {
+            "木": 2,
+            "火": 2.5,
+            "土": 3.5,
+            "金": 1.5,
+            "水": 3.5
+          },
+          "withHiddenFull": {
+            "木": 2,
+            "火": 3,
+            "土": 4,
+            "金": 1,
+            "水": 4
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "丙寅 壬辰 丙申 戊子",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "late-zi-sect2",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1986,
+          "month": 4,
+          "day": 21,
+          "hour": 23,
+          "minute": 30,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 2
+        },
+        "meta": {
+          "dayMaster": "乙",
+          "dayMasterEn": "Yi Yin Wood",
+          "dayElement": "木",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 23,
+            "minute": 6,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1986-04-21 23:30",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 2,
+          "sectLabel": "零点换日",
+          "sectLabelEn": "Midnight rule — the day pillar changes at 00:00"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "丙寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "伤官",
+            "naYin": "炉中火"
+          },
+          "month": {
+            "ganzhi": "壬辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "长流水"
+          },
+          "day": {
+            "ganzhi": "乙未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "沙中金"
+          },
+          "time": {
+            "ganzhi": "戊子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "霹雳火"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 1,
+            "土": 3,
+            "金": 0,
+            "水": 2
+          },
+          "withHiddenHalfWeight": {
+            "木": 3.5,
+            "火": 2,
+            "土": 4.5,
+            "金": 0,
+            "水": 3
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 3,
+            "土": 4,
+            "金": 0,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "丙寅 壬辰 乙未 戊子",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "unknown-hour",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1992,
+          "month": 9,
+          "day": 9,
+          "hour": null,
+          "minute": 0,
+          "longitude": 118.78,
+          "tzOffsetHours": 8,
+          "unknownTime": true,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "戊",
+          "dayMasterEn": "Wu Yang Earth",
+          "dayElement": "土",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": 0,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": null,
+          "absoluteInstantBeijing": "1992-09-09 12:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "壬申",
+            "hideGan": [
+              "庚",
+              "壬",
+              "戊"
+            ],
+            "shiShenGan": "偏财",
+            "naYin": "剑锋金"
+          },
+          "month": {
+            "ganzhi": "己酉",
+            "hideGan": [
+              "辛"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "大驿土"
+          },
+          "day": {
+            "ganzhi": "戊子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "霹雳火"
+          },
+          "time": {
+            "ganzhi": null,
+            "hideGan": null,
+            "shiShenGan": null,
+            "naYin": null
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 0,
+            "火": 0,
+            "土": 2,
+            "金": 2,
+            "水": 2
+          },
+          "withHiddenHalfWeight": {
+            "木": 0,
+            "火": 0,
+            "土": 2.5,
+            "金": 3,
+            "水": 3
+          },
+          "withHiddenFull": {
+            "木": 0,
+            "火": 0,
+            "土": 3,
+            "金": 2,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "壬申 己酉 戊子 —",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "dst-1988",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1988,
+          "month": 7,
+          "day": 10,
+          "hour": 14,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "丙",
+          "dayMasterEn": "Bing Yang Fire",
+          "dayElement": "火",
+          "dayPolarity": "阳",
+          "dstApplied": true,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 12,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1988-07-10 13:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "戊辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "大林木"
+          },
+          "month": {
+            "ganzhi": "己未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "伤官",
+            "naYin": "天上火"
+          },
+          "day": {
+            "ganzhi": "丙寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "炉中火"
+          },
+          "time": {
+            "ganzhi": "甲午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "沙中金"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 2,
+            "土": 4,
+            "金": 0,
+            "水": 0
+          },
+          "withHiddenHalfWeight": {
+            "木": 3.5,
+            "火": 3.5,
+            "土": 6,
+            "金": 0,
+            "水": 0.5
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 4,
+            "土": 6,
+            "金": 0,
+            "水": 1
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "戊辰 己未 丙寅 甲午",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "no-dst-1988",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1988,
+          "month": 12,
+          "day": 10,
+          "hour": 14,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "己",
+          "dayMasterEn": "Ji Yin Earth",
+          "dayElement": "土",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 13,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1988-12-10 14:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "戊辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "大林木"
+          },
+          "month": {
+            "ganzhi": "甲子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "正官",
+            "naYin": "海中金"
+          },
+          "day": {
+            "ganzhi": "己亥",
+            "hideGan": [
+              "壬",
+              "甲"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "平地木"
+          },
+          "time": {
+            "ganzhi": "辛未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "路旁土"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 0,
+            "土": 4,
+            "金": 1,
+            "水": 2
+          },
+          "withHiddenHalfWeight": {
+            "木": 2.5,
+            "火": 0.5,
+            "土": 5,
+            "金": 1,
+            "水": 3.5
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 1,
+            "土": 4,
+            "金": 1,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "戊辰 甲子 己亥 辛未",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "dst-1988-april",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1988,
+          "month": 4,
+          "day": 20,
+          "hour": 10,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "乙",
+          "dayMasterEn": "Yi Yin Wood",
+          "dayElement": "木",
+          "dayPolarity": "阴",
+          "dstApplied": true,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 8,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1988-04-20 09:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "戊辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "大林木"
+          },
+          "month": {
+            "ganzhi": "丙辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "伤官",
+            "naYin": "沙中土"
+          },
+          "day": {
+            "ganzhi": "乙巳",
+            "hideGan": [
+              "丙",
+              "庚",
+              "戊"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "覆灯火"
+          },
+          "time": {
+            "ganzhi": "庚辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "正官",
+            "naYin": "白蜡金"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 2,
+            "土": 4,
+            "金": 1,
+            "水": 0
+          },
+          "withHiddenHalfWeight": {
+            "木": 2.5,
+            "火": 2.5,
+            "土": 6,
+            "金": 1.5,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 2,
+            "土": 5,
+            "金": 2,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "戊辰 丙辰 乙巳 庚辰",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "dst-midnight-1988",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1988,
+          "month": 7,
+          "day": 11,
+          "hour": 0,
+          "minute": 30,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "丁",
+          "dayMasterEn": "Ding Yin Fire",
+          "dayElement": "火",
+          "dayPolarity": "阴",
+          "dstApplied": true,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 23,
+            "minute": 6,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1988-07-10 23:30",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "戊辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "伤官",
+            "naYin": "大林木"
+          },
+          "month": {
+            "ganzhi": "己未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "天上火"
+          },
+          "day": {
+            "ganzhi": "丁卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "炉中火"
+          },
+          "time": {
+            "ganzhi": "庚子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "壁上土"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 1,
+            "土": 4,
+            "金": 1,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 2.5,
+            "火": 1.5,
+            "土": 5,
+            "金": 1,
+            "水": 2
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 2,
+            "土": 4,
+            "金": 1,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "戊辰 己未 丁卯 庚子",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "xinjiang",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1994,
+          "month": 5,
+          "day": 5,
+          "hour": 9,
+          "minute": 0,
+          "longitude": 87.62,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "辛",
+          "dayMasterEn": "Xin Yin Metal",
+          "dayElement": "金",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -129.51999999999998,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 6,
+            "minute": 50,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1994-05-05 09:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "甲戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "山头火"
+          },
+          "month": {
+            "ganzhi": "戊辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "大林木"
+          },
+          "day": {
+            "ganzhi": "辛卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "松柏木"
+          },
+          "time": {
+            "ganzhi": "辛卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "松柏木"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 3,
+            "火": 0,
+            "土": 3,
+            "金": 2,
+            "水": 0
+          },
+          "withHiddenHalfWeight": {
+            "木": 4.5,
+            "火": 0.5,
+            "土": 4,
+            "金": 2.5,
+            "水": 0.5
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 1,
+            "土": 3,
+            "金": 3,
+            "水": 1
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "甲戌 戊辰 辛卯 辛卯",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "heilongjiang",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1994,
+          "month": 5,
+          "day": 5,
+          "hour": 9,
+          "minute": 0,
+          "longitude": 126.53,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "辛",
+          "dayMasterEn": "Xin Yin Metal",
+          "dayElement": "金",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": 26.120000000000005,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 9,
+            "minute": 26,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1994-05-05 09:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "甲戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "山头火"
+          },
+          "month": {
+            "ganzhi": "戊辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "大林木"
+          },
+          "day": {
+            "ganzhi": "辛卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "松柏木"
+          },
+          "time": {
+            "ganzhi": "癸巳",
+            "hideGan": [
+              "丙",
+              "庚",
+              "戊"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "长流水"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 1,
+            "土": 3,
+            "金": 1,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 3,
+            "火": 2,
+            "土": 4.5,
+            "金": 2,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 2,
+            "土": 4,
+            "金": 3,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "甲戌 戊辰 辛卯 癸巳",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "overseas-nyc",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1991,
+          "month": 3,
+          "day": 23,
+          "hour": 11,
+          "minute": 0,
+          "longitude": -74.01,
+          "tzOffsetHours": -5,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "壬",
+          "dayMasterEn": "Ren Yang Water",
+          "dayElement": "水",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": 3.9599999999999795,
+          "tzCentralMeridian": -75,
+          "tzOffsetHours": -5,
+          "trueSolarTime": {
+            "hour": 11,
+            "minute": 3,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1991-03-24 00:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "辛未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "路旁土"
+          },
+          "month": {
+            "ganzhi": "辛卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "松柏木"
+          },
+          "day": {
+            "ganzhi": "壬辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "长流水"
+          },
+          "time": {
+            "ganzhi": "丙午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "偏财",
+            "naYin": "天河水"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 2,
+            "土": 2,
+            "金": 2,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 2.5,
+            "火": 3,
+            "土": 3.5,
+            "金": 2,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 3,
+            "土": 3,
+            "金": 2,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "辛未 辛卯 壬辰 丙午",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "overseas-london",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1993,
+          "month": 7,
+          "day": 7,
+          "hour": 15,
+          "minute": 30,
+          "longitude": -0.13,
+          "tzOffsetHours": 1,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "己",
+          "dayMasterEn": "Ji Yin Earth",
+          "dayElement": "土",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -60.52,
+          "tzCentralMeridian": 15,
+          "tzOffsetHours": 1,
+          "trueSolarTime": {
+            "hour": 14,
+            "minute": 29,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1993-07-07 22:30",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "癸酉",
+            "hideGan": [
+              "辛"
+            ],
+            "shiShenGan": "偏财",
+            "naYin": "剑锋金"
+          },
+          "month": {
+            "ganzhi": "己未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "天上火"
+          },
+          "day": {
+            "ganzhi": "己丑",
+            "hideGan": [
+              "己",
+              "癸",
+              "辛"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "霹雳火"
+          },
+          "time": {
+            "ganzhi": "辛未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "路旁土"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 0,
+            "火": 0,
+            "土": 5,
+            "金": 2,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 1,
+            "火": 1,
+            "土": 6.5,
+            "金": 3,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 2,
+            "火": 2,
+            "土": 5,
+            "金": 3,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "癸酉 己未 己丑 辛未",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "xiaoshu-before",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1993,
+          "month": 7,
+          "day": 7,
+          "hour": 10,
+          "minute": 0,
+          "longitude": 116.4,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "己",
+          "dayMasterEn": "Ji Yin Earth",
+          "dayElement": "土",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -14.399999999999977,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 9,
+            "minute": 45,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1993-07-07 10:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "癸酉",
+            "hideGan": [
+              "辛"
+            ],
+            "shiShenGan": "偏财",
+            "naYin": "剑锋金"
+          },
+          "month": {
+            "ganzhi": "戊午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "天上火"
+          },
+          "day": {
+            "ganzhi": "己丑",
+            "hideGan": [
+              "己",
+              "癸",
+              "辛"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "霹雳火"
+          },
+          "time": {
+            "ganzhi": "己巳",
+            "hideGan": [
+              "丙",
+              "庚",
+              "戊"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "大林木"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 0,
+            "火": 2,
+            "土": 4,
+            "金": 1,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 0,
+            "火": 3,
+            "土": 5.5,
+            "金": 2.5,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 0,
+            "火": 2,
+            "土": 6,
+            "金": 3,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "癸酉 戊午 己丑 己巳",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "xiaoshu-after",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1993,
+          "month": 7,
+          "day": 7,
+          "hour": 11,
+          "minute": 0,
+          "longitude": 116.4,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "己",
+          "dayMasterEn": "Ji Yin Earth",
+          "dayElement": "土",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -14.399999999999977,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 10,
+            "minute": 45,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1993-07-07 11:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "癸酉",
+            "hideGan": [
+              "辛"
+            ],
+            "shiShenGan": "偏财",
+            "naYin": "剑锋金"
+          },
+          "month": {
+            "ganzhi": "己未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "天上火"
+          },
+          "day": {
+            "ganzhi": "己丑",
+            "hideGan": [
+              "己",
+              "癸",
+              "辛"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "霹雳火"
+          },
+          "time": {
+            "ganzhi": "己巳",
+            "hideGan": [
+              "丙",
+              "庚",
+              "戊"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "大林木"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 0,
+            "火": 1,
+            "土": 5,
+            "金": 1,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 0.5,
+            "火": 2,
+            "土": 6.5,
+            "金": 2.5,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 1,
+            "火": 2,
+            "土": 6,
+            "金": 3,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "癸酉 己未 己丑 己巳",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "overseas-la-crossday",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1993,
+          "month": 7,
+          "day": 6,
+          "hour": 20,
+          "minute": 0,
+          "longitude": -118.24,
+          "tzOffsetHours": -8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "戊",
+          "dayMasterEn": "Wu Yang Earth",
+          "dayElement": "土",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": 7.0400000000000205,
+          "tzCentralMeridian": -120,
+          "tzOffsetHours": -8,
+          "trueSolarTime": {
+            "hour": 20,
+            "minute": 7,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1993-07-07 12:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "癸酉",
+            "hideGan": [
+              "辛"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "剑锋金"
+          },
+          "month": {
+            "ganzhi": "己未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "天上火"
+          },
+          "day": {
+            "ganzhi": "戊子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "霹雳火"
+          },
+          "time": {
+            "ganzhi": "壬戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "偏财",
+            "naYin": "大海水"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 0,
+            "火": 0,
+            "土": 4,
+            "金": 1,
+            "水": 3
+          },
+          "withHiddenHalfWeight": {
+            "木": 0.5,
+            "火": 1,
+            "土": 5,
+            "金": 2,
+            "水": 3.5
+          },
+          "withHiddenFull": {
+            "木": 1,
+            "火": 2,
+            "土": 4,
+            "金": 2,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "癸酉 己未 戊子 壬戌",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "old-1965",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1965,
+          "month": 2,
+          "day": 14,
+          "hour": 6,
+          "minute": 20,
+          "longitude": 117.2,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "己",
+          "dayMasterEn": "Ji Yin Earth",
+          "dayElement": "土",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -11.199999999999989,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 6,
+            "minute": 8,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1965-02-14 06:20",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "乙巳",
+            "hideGan": [
+              "丙",
+              "庚",
+              "戊"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "覆灯火"
+          },
+          "month": {
+            "ganzhi": "戊寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "城头土"
+          },
+          "day": {
+            "ganzhi": "己亥",
+            "hideGan": [
+              "壬",
+              "甲"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "平地木"
+          },
+          "time": {
+            "ganzhi": "丁卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "炉中火"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 3,
+            "火": 2,
+            "土": 2,
+            "金": 0,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 4.5,
+            "火": 3,
+            "土": 3,
+            "金": 0.5,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 3,
+            "土": 4,
+            "金": 1,
+            "水": 1
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "乙巳 戊寅 己亥 丁卯",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "recent-2025",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2025,
+          "month": 8,
+          "day": 23,
+          "hour": 20,
+          "minute": 5,
+          "longitude": 113.26,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "甲",
+          "dayMasterEn": "Jia Yang Wood",
+          "dayElement": "木",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -26.95999999999998,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 19,
+            "minute": 38,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2025-08-23 20:05",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "乙巳",
+            "hideGan": [
+              "丙",
+              "庚",
+              "戊"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "覆灯火"
+          },
+          "month": {
+            "ganzhi": "甲申",
+            "hideGan": [
+              "庚",
+              "壬",
+              "戊"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "泉中水"
+          },
+          "day": {
+            "ganzhi": "甲子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "海中金"
+          },
+          "time": {
+            "ganzhi": "甲戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "山头火"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 4,
+            "火": 1,
+            "土": 1,
+            "金": 1,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 4,
+            "火": 2,
+            "土": 2.5,
+            "金": 2.5,
+            "水": 2
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 2,
+            "土": 3,
+            "金": 3,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "乙巳 甲申 甲子 甲戌",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "dm-jia",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1984,
+          "month": 2,
+          "day": 2,
+          "hour": 12,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "丙",
+          "dayMasterEn": "Bing Yang Fire",
+          "dayElement": "火",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 11,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1984-02-02 12:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "癸亥",
+            "hideGan": [
+              "壬",
+              "甲"
+            ],
+            "shiShenGan": "正官",
+            "naYin": "大海水"
+          },
+          "month": {
+            "ganzhi": "乙丑",
+            "hideGan": [
+              "己",
+              "癸",
+              "辛"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "海中金"
+          },
+          "day": {
+            "ganzhi": "丙寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "炉中火"
+          },
+          "time": {
+            "ganzhi": "甲午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "沙中金"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 3,
+            "火": 2,
+            "土": 1,
+            "金": 0,
+            "水": 2
+          },
+          "withHiddenHalfWeight": {
+            "木": 4,
+            "火": 3,
+            "土": 2.5,
+            "金": 0.5,
+            "水": 3
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 3,
+            "土": 3,
+            "金": 1,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "癸亥 乙丑 丙寅 甲午",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "dm-bing",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1996,
+          "month": 6,
+          "day": 6,
+          "hour": 12,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "甲",
+          "dayMasterEn": "Jia Yang Wood",
+          "dayElement": "木",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 11,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1996-06-06 12:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "丙子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "食神",
+            "naYin": "涧下水"
+          },
+          "month": {
+            "ganzhi": "甲午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "沙中金"
+          },
+          "day": {
+            "ganzhi": "甲戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "山头火"
+          },
+          "time": {
+            "ganzhi": "庚午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "路旁土"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 3,
+            "土": 1,
+            "金": 1,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 2,
+            "火": 4.5,
+            "土": 2.5,
+            "金": 1.5,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 2,
+            "火": 4,
+            "土": 3,
+            "金": 2,
+            "水": 1
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "丙子 甲午 甲戌 庚午",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "dm-wu",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1998,
+          "month": 8,
+          "day": 8,
+          "hour": 12,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "丁",
+          "dayMasterEn": "Ding Yin Fire",
+          "dayElement": "火",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 11,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1998-08-08 12:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "戊寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "伤官",
+            "naYin": "城头土"
+          },
+          "month": {
+            "ganzhi": "庚申",
+            "hideGan": [
+              "庚",
+              "壬",
+              "戊"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "石榴木"
+          },
+          "day": {
+            "ganzhi": "丁亥",
+            "hideGan": [
+              "壬",
+              "甲"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "屋上土"
+          },
+          "time": {
+            "ganzhi": "丙午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "天河水"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 3,
+            "土": 1,
+            "金": 2,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 2,
+            "火": 4,
+            "土": 2.5,
+            "金": 2.5,
+            "水": 2
+          },
+          "withHiddenFull": {
+            "木": 2,
+            "火": 4,
+            "土": 4,
+            "金": 2,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "戊寅 庚申 丁亥 丙午",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "dm-geng",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2000,
+          "month": 10,
+          "day": 10,
+          "hour": 12,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "辛",
+          "dayMasterEn": "Xin Yin Metal",
+          "dayElement": "金",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 11,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2000-10-10 12:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "庚辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "白蜡金"
+          },
+          "month": {
+            "ganzhi": "丙戌",
+            "hideGan": [
+              "戊",
+              "辛",
+              "丁"
+            ],
+            "shiShenGan": "正官",
+            "naYin": "屋上土"
+          },
+          "day": {
+            "ganzhi": "辛丑",
+            "hideGan": [
+              "己",
+              "癸",
+              "辛"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "壁上土"
+          },
+          "time": {
+            "ganzhi": "甲午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "沙中金"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 2,
+            "土": 3,
+            "金": 2,
+            "水": 0
+          },
+          "withHiddenHalfWeight": {
+            "木": 1.5,
+            "火": 3,
+            "土": 5,
+            "金": 3,
+            "水": 1
+          },
+          "withHiddenFull": {
+            "木": 2,
+            "火": 3,
+            "土": 4,
+            "金": 4,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "庚辰 丙戌 辛丑 甲午",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "dm-ren",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2002,
+          "month": 12,
+          "day": 12,
+          "hour": 12,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "甲",
+          "dayMasterEn": "Jia Yang Wood",
+          "dayElement": "木",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 11,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2002-12-12 12:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "壬午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "杨柳木"
+          },
+          "month": {
+            "ganzhi": "壬子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "桑柘木"
+          },
+          "day": {
+            "ganzhi": "甲寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "大溪水"
+          },
+          "time": {
+            "ganzhi": "庚午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "路旁土"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 2,
+            "土": 0,
+            "金": 1,
+            "水": 3
+          },
+          "withHiddenHalfWeight": {
+            "木": 2.5,
+            "火": 3.5,
+            "土": 1.5,
+            "金": 1,
+            "水": 3.5
+          },
+          "withHiddenFull": {
+            "木": 2,
+            "火": 3,
+            "土": 3,
+            "金": 1,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "壬午 壬子 甲寅 庚午",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "midnight-2355",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1999,
+          "month": 3,
+          "day": 19,
+          "hour": 23,
+          "minute": 55,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "辛",
+          "dayMasterEn": "Xin Yin Metal",
+          "dayElement": "金",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 23,
+            "minute": 31,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1999-03-19 23:55",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "己卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "城头土"
+          },
+          "month": {
+            "ganzhi": "丁卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "炉中火"
+          },
+          "day": {
+            "ganzhi": "辛未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "路旁土"
+          },
+          "time": {
+            "ganzhi": "戊子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "霹雳火"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 1,
+            "土": 3,
+            "金": 1,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 3.5,
+            "火": 1.5,
+            "土": 3.5,
+            "金": 1,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 2,
+            "土": 3,
+            "金": 1,
+            "水": 1
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "己卯 丁卯 辛未 戊子",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "midnight-0005",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1999,
+          "month": 3,
+          "day": 20,
+          "hour": 0,
+          "minute": 5,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "辛",
+          "dayMasterEn": "Xin Yin Metal",
+          "dayElement": "金",
+          "dayPolarity": "阴",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 23,
+            "minute": 41,
+            "dateShifted": true
+          },
+          "absoluteInstantBeijing": "1999-03-20 00:05",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "己卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "城头土"
+          },
+          "month": {
+            "ganzhi": "丁卯",
+            "hideGan": [
+              "乙"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "炉中火"
+          },
+          "day": {
+            "ganzhi": "辛未",
+            "hideGan": [
+              "己",
+              "丁",
+              "乙"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "路旁土"
+          },
+          "time": {
+            "ganzhi": "戊子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "正印",
+            "naYin": "霹雳火"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 1,
+            "土": 3,
+            "金": 1,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 3.5,
+            "火": 1.5,
+            "土": 3.5,
+            "金": 1,
+            "水": 1.5
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 2,
+            "土": 3,
+            "金": 1,
+            "水": 1
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "己卯 丁卯 辛未 戊子",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "leap-day",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 1996,
+          "month": 2,
+          "day": 29,
+          "hour": 9,
+          "minute": 15,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "丙",
+          "dayMasterEn": "Bing Yang Fire",
+          "dayElement": "火",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 8,
+            "minute": 51,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "1996-02-29 09:15",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "丙子",
+            "hideGan": [
+              "癸"
+            ],
+            "shiShenGan": "比肩",
+            "naYin": "涧下水"
+          },
+          "month": {
+            "ganzhi": "庚寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "偏财",
+            "naYin": "松柏木"
+          },
+          "day": {
+            "ganzhi": "丙申",
+            "hideGan": [
+              "庚",
+              "壬",
+              "戊"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "山下火"
+          },
+          "time": {
+            "ganzhi": "壬辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "长流水"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 1,
+            "火": 2,
+            "土": 1,
+            "金": 2,
+            "水": 2
+          },
+          "withHiddenHalfWeight": {
+            "木": 2,
+            "火": 2.5,
+            "土": 2.5,
+            "金": 2.5,
+            "水": 3.5
+          },
+          "withHiddenFull": {
+            "木": 2,
+            "火": 3,
+            "土": 3,
+            "金": 2,
+            "水": 4
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "丙子 庚寅 丙申 壬辰",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "month-end",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2001,
+          "month": 1,
+          "day": 31,
+          "hour": 21,
+          "minute": 40,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "甲",
+          "dayMasterEn": "Jia Yang Wood",
+          "dayElement": "木",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 21,
+            "minute": 16,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2001-01-31 21:40",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "庚辰",
+            "hideGan": [
+              "戊",
+              "乙",
+              "癸"
+            ],
+            "shiShenGan": "七杀",
+            "naYin": "白蜡金"
+          },
+          "month": {
+            "ganzhi": "己丑",
+            "hideGan": [
+              "己",
+              "癸",
+              "辛"
+            ],
+            "shiShenGan": "正财",
+            "naYin": "霹雳火"
+          },
+          "day": {
+            "ganzhi": "甲午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "沙中金"
+          },
+          "time": {
+            "ganzhi": "乙亥",
+            "hideGan": [
+              "壬",
+              "甲"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "山头火"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 1,
+            "土": 3,
+            "金": 1,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 3,
+            "火": 1.5,
+            "土": 4.5,
+            "金": 1.5,
+            "水": 2.5
+          },
+          "withHiddenFull": {
+            "木": 4,
+            "火": 1,
+            "土": 4,
+            "金": 2,
+            "水": 3
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "庚辰 己丑 甲午 乙亥",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "cny-2020",
+      "expectedNote": "",
+      "result": {
+        "input": {
+          "year": 2020,
+          "month": 1,
+          "day": 24,
+          "hour": 13,
+          "minute": 0,
+          "longitude": 114.06,
+          "tzOffsetHours": 8,
+          "unknownTime": false,
+          "sect": 1
+        },
+        "meta": {
+          "dayMaster": "丙",
+          "dayMasterEn": "Bing Yang Fire",
+          "dayElement": "火",
+          "dayPolarity": "阳",
+          "dstApplied": false,
+          "trueSolarOffsetMinutes": -23.75999999999999,
+          "tzCentralMeridian": 120,
+          "tzOffsetHours": 8,
+          "trueSolarTime": {
+            "hour": 12,
+            "minute": 36,
+            "dateShifted": false
+          },
+          "absoluteInstantBeijing": "2020-01-24 13:00",
+          "engine": "lunar-javascript",
+          "engineVersion": "lunar-javascript + 本引擎约定 v0.15.1",
+          "sect": 1,
+          "sectLabel": "晚子时日柱归次日（23:00 换日）",
+          "sectLabelEn": "Late-Zi rule — the day pillar rolls over at 23:00 local true solar time (mainstream)"
+        },
+        "pillars": {
+          "year": {
+            "ganzhi": "己亥",
+            "hideGan": [
+              "壬",
+              "甲"
+            ],
+            "shiShenGan": "伤官",
+            "naYin": "平地木"
+          },
+          "month": {
+            "ganzhi": "丁丑",
+            "hideGan": [
+              "己",
+              "癸",
+              "辛"
+            ],
+            "shiShenGan": "劫财",
+            "naYin": "涧下水"
+          },
+          "day": {
+            "ganzhi": "丙寅",
+            "hideGan": [
+              "甲",
+              "丙",
+              "戊"
+            ],
+            "shiShenGan": "日主",
+            "naYin": "炉中火"
+          },
+          "time": {
+            "ganzhi": "甲午",
+            "hideGan": [
+              "丁",
+              "己"
+            ],
+            "shiShenGan": "偏印",
+            "naYin": "沙中金"
+          }
+        },
+        "fiveElements": {
+          "stemsBranchesOnly": {
+            "木": 2,
+            "火": 3,
+            "土": 2,
+            "金": 0,
+            "水": 1
+          },
+          "withHiddenHalfWeight": {
+            "木": 3,
+            "火": 4,
+            "土": 3.5,
+            "金": 0.5,
+            "水": 2
+          },
+          "withHiddenFull": {
+            "木": 3,
+            "火": 4,
+            "土": 4,
+            "金": 1,
+            "水": 2
+          }
+        },
+        "tenGodsEn": {
+          "比肩": "Peer (BiJian)",
+          "劫财": "Rival (JieCai)",
+          "食神": "Eating God (ShiShen)",
+          "伤官": "Hurting Officer (ShangGuan)",
+          "偏财": "Indirect Wealth (PianCai)",
+          "正财": "Direct Wealth (ZhengCai)",
+          "七杀": "Seven Killings (QiSha)",
+          "正官": "Direct Officer (ZhengGuan)",
+          "偏印": "Indirect Resource (PianYin)",
+          "正印": "Direct Resource (ZhengYin)"
+        }
+      },
+      "expected": {
+        "fourPillars": "己亥 丁丑 丙寅 甲午",
+        "verifiedBy": "独立算法差分对拍（儒略日公式+五时遁+五虎遁+节气表，与引擎算法路径不同）",
+        "verifiedAt": "2026-09-21",
+        "status": "verified"
+      }
+    }
+  ]
+}

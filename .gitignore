@@ -1,0 +1,39 @@
+# bazi-engine — publish allowlist
+#
+# This directory also contains the bazi-atlas.com site build (page factory, keyword
+# ledger, browser gates). Those are site assets, not engine code, and stay out of
+# the public repository. Everything not ignored below IS published.
+
+# --- site build assets (not published) ---
+# 规格书.html is the historical v0.1 planning spec; current conventions live in
+# engine.mjs comments + https://bazi-atlas.com/methodology
+/规格书.html
+/gen/
+/keywords/
+/analytics/
+/ai-citation-baseline/
+/visual-out/
+/web/*
+!/web/bazi-engine.web.js
+/visual-check.mjs
+/test-site-consistency.mjs
+/test-mobile-overflow.mjs
+# page-level smoke tests: they execute the built site's HTML, not the engine
+/test-calculator-smoke.mjs
+/test-ten-gods-smoke.mjs
+/test-compatibility-smoke.mjs
+/test-luck-pillars-smoke.mjs
+/test-favorable-element-smoke.mjs
+/tools/audit-style.mjs
+/tools/audit-style.json
+/tools/link-color-compare.mjs
+/tools/link-color-out*/
+/tools/check-analytics.mjs
+/tools/fetch-analytics.mjs
+/tools/patch-hardcoded-links.py
+/tools/submit-indexnow.py
+
+# --- environment ---
+node_modules/
+.DS_Store
+*.log
